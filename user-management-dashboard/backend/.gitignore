@@ -1,0 +1,4 @@
+# .gitignore
+node_modules
+users.db
+.env
