@@ -1,7 +1,7 @@
 // frontend/src/api/userService.js
 import axios from 'axios';
 
-const API_URL = 'https://chetan-userdasboard-app-1.onrender.com';
+const API_URL = process.env.REACT_APP_API_URL || "https://your-backend-service-url.onrender.com/api/users";
 
 const getAllUsers = () => {
     return axios.get(API_URL);
