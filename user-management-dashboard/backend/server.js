@@ -6,8 +6,13 @@ const userRoutes = require('./routes/users.js');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
+const corsOptions = {
+  origin: 'https://chetan-user-dashboard-rhep-55ht-chetan-ponugotis-projects.vercel.app',
+  optionsSuccessStatus: 200
+};
+
 // Middleware
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(express.json()); // To parse JSON request bodies
 
 // Base Route
