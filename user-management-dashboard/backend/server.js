@@ -7,7 +7,7 @@ const app = express();
 const PORT = process.env.PORT || 8080;
 
 const corsOptions = {
-  origin: 'https://chetan-user-dashboard-rhep-55ht-chetan-ponugotis-projects.vercel.app',
+  origin: 'https://chetan-user-dasboard-mia31p94g-chetan-ponugotis-projects.vercel.app/',
   optionsSuccessStatus: 200
 };
 
