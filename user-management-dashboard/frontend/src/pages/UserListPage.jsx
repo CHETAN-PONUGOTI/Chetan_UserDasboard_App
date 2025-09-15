@@ -13,7 +13,12 @@ const UserListPage = () => {
     const fetchUsers = () => {
         userService.getAllUsers()
             .then(response => {
-                setUsers(response.data.data);
+                // Add a console.log to see the actual response from your Render API
+                console.log("API Response:", response.data);
+
+                // Safely access the data and ensure it's always an array
+                const usersData = response.data && response.data.data;
+                setUsers(Array.isArray(usersData) ? usersData : []);
             })
             .catch(err => {
                 setError('Failed to fetch users.');
