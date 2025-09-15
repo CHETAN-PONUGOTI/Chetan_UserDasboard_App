@@ -6,13 +6,8 @@ const userRoutes = require('./routes/users.js');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const corsOptions = {
-  origin: 'https://chetan-user-dasboard-mia31p94g-chetan-ponugotis-projects.vercel.app/',
-  optionsSuccessStatus: 200
-};
-
 // Middleware
-app.use(cors(corsOptions));
+app.use(cors());
 app.use(express.json()); // To parse JSON request bodies
 
 // Base Route
